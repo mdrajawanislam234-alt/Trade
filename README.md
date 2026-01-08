@@ -1,38 +1,20 @@
-# 🚀 AlphaTrader Pro Journal
+# 🚀 AlphaTrader Pro Journal (Netlify Deployment)
 
-A professional-grade trading journal for serious traders. 100% Client-side. No backend required. Your data never leaves your browser.
+এই প্রোজেক্টটি Netlify-তে সহজে ডেপ্লয় করার জন্য অপ্টিমাইজ করা হয়েছে।
 
-## ✨ Features
-- **The Cockpit**: Real-time performance metrics (P&L, Win Rate, Profit Factor).
-- **Edge Analysis**: AI-powered trade review using Gemini API.
-- **Privacy First**: All data is stored in your browser's `localStorage`.
-- **Advanced Charts**: Equity curves and Github-style activity heatmaps.
+## 🔑 API Key সেটআপ করার পদ্ধতি (Netlify)
 
-## 📦 How to Upload to GitHub
-1. Create a new repository on GitHub.
-2. Open your terminal in this project folder.
-3. Run the following commands:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: AlphaTrader Pro"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-   git push -u origin main
-   ```
+আপনার AI Analyst ফিচারের জন্য Gemini API Key সেট করতে নিচের ধাপগুলো অনুসরণ করুন:
 
-## 🌐 Hosting on GitHub Pages
-1. Go to your repository on GitHub.
-2. Click on **Settings** > **Pages**.
-3. Under **Build and deployment** > **Source**, select `Deploy from a branch`.
-4. Select `main` branch and folder `/ (root)`.
-5. Click **Save**. Your site will be live in a few minutes!
+1. **Netlify Dashboard**-এ আপনার সাইটে যান।
+2. **Site settings** > **Environment variables**-এ ক্লিক করুন।
+3. **Add a variable** বাটনে ক্লিক করুন।
+4. **Key**: `API_KEY` লিখুন।
+5. **Value**: আপনার Gemini API Key-টি দিন।
+6. সেভ করার পর **Deploys** মেনু থেকে সাইটটি আবার **Redeploy** করুন।
 
-## 🛠️ Local Development
-To run this locally, you don't need to build anything. Just use a simple static server:
-```bash
-npx serve .
-```
+## 📦 Local-এ চালানোর পদ্ধতি
+আপনি যদি পিসিতে এটি চালাতে চান, তবে `index.html`-এর স্ক্রিপ্ট সেকশনে সাময়িকভাবে `window.process.env.API_KEY = 'your_key_here'` লিখে টেস্ট করতে পারেন (কিন্তু GitHub-এ পুশ করার আগে অবশ্যই তা মুছে ফেলবেন)।
 
-## 🔑 AI Features
-To use the AI Analyst, ensure you have a Gemini API Key. The app expects `process.env.API_KEY` to be available (handled automatically in certain environments) or you can modify `AIAnalyst.tsx` to use your preferred method of key management.
+## 🛠️ Troubleshooting
+যদি AI Coach কাজ না করে, তবে ব্রাউজার কনসোলে এরর চেক করুন। নিশ্চিত করুন যে আপনার API Key-তে কোনো স্পেস নেই।

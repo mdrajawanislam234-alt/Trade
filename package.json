@@ -1,18 +1,9 @@
 {
   "name": "alphatrader-pro-journal",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "private": true,
-  "description": "High-performance Pro Trading Journal using React and LocalStorage",
+  "description": "Static Pro Trading Journal",
   "scripts": {
-    "start": "npx serve .",
-    "dev": "npx serve ."
-  },
-  "keywords": [
-    "trading",
-    "journal",
-    "fintech",
-    "react",
-    "localstorage"
-  ],
-  "author": "AlphaTrader Team"
+    "build": "echo 'No build step required for this static site'"
+  }
 }
